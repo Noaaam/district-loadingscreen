@@ -32,9 +32,17 @@
 
 <div class="bg-image"></div>
 <!-- Lecteur de musique -->
-<audio autoplay loop volume="0.05">
+<audio id="backgroundMusic" autoplay loop>
     <source src="./music.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+    // Définir le volume au chargement de la page
+    window.onload = function() {
+        var music = document.getElementById("backgroundMusic");
+        music.volume = 0.2; // Volume réglé à 20%
+    }
+</script>
 
 </body>
 </html>
